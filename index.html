@@ -67,40 +67,44 @@
 
     .row {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
       padding: 0.8rem;
       border-bottom: 1px solid #ddd;
       position: relative;
+      white-space: nowrap;
+      overflow-x: auto;
     }
 
-    .row:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .row:nth-child(odd) {
-      background-color: #ffffff;
-    }
-
-    .time, .activity, .comment {
-      padding: 0 0.5rem;
-    }
+    /* Colorful alternate row colors */
+    .row:nth-child(1) { background-color: #FFCDD2; }
+    .row:nth-child(2) { background-color: #C8E6C9; }
+    .row:nth-child(3) { background-color: #BBDEFB; }
+    .row:nth-child(4) { background-color: #FFF9C4; }
+    .row:nth-child(5) { background-color: #D1C4E9; }
+    .row:nth-child(6) { background-color: #FFECB3; }
+    .row:nth-child(7) { background-color: #B2DFDB; }
+    .row:nth-child(8) { background-color: #F0F4C3; }
+    .row:nth-child(9) { background-color: #FFE0B2; }
+    .row:nth-child(10) { background-color: #CFD8DC; }
 
     .time {
-      width: 20%;
-      text-align: left;
+      width: 80px;
+      flex-shrink: 0;
       font-weight: bold;
+      text-align: left;
+      padding-right: 1rem;
     }
 
-    .activity {
-      width: 40%;
-      text-align: left;
+    .activity-comment {
+      display: flex;
+      flex-shrink: 0;
+      min-width: 500px; /* allow horizontal scroll */
     }
 
-    .comment {
-      width: 40%;
-      text-align: left;
-      font-style: italic;
-      color: #555;
+    .activity, .comment {
+      padding: 0 0.5rem;
+      flex-shrink: 0;
     }
 
     .highlight-line {
@@ -113,13 +117,9 @@
     }
 
     @media (max-width: 600px) {
-      .time, .activity, .comment {
-        font-size: 0.95rem;
-      }
-      .day-container button {
-        font-size: 1.8rem;
-        padding: 0.3rem 0.6rem;
-      }
+      .time { width: 60px; }
+      .activity-comment { min-width: 300px; }
+      .day-container button { font-size: 1.8rem; padding: 0.3rem 0.6rem; }
     }
   </style>
 </head>
@@ -145,7 +145,6 @@
       const data = await res.json();
       scheduleData = data.TimeChart;
 
-      // Determine today's day
       const todayName = new Date().toLocaleDateString('en-US', { weekday: 'long' });
       currentDayIndex = scheduleData.findIndex(d => d.Day.toLowerCase() === todayName.toLowerCase());
       if (currentDayIndex === -1) currentDayIndex = 0;
@@ -171,8 +170,10 @@
         row.dataset.time = item.Time || '';
         row.innerHTML = `
           <div class="time">${item.Time || ''}</div>
-          <div class="activity">${item.Activity || ''}</div>
-          <div class="comment">${item.Comment || ''}</div>
+          <div class="activity-comment">
+            <div class="activity">${item.Activity || ''}</div>
+            <div class="comment">${item.Comment || ''}</div>
+          </div>
         `;
         timelineEl.appendChild(row);
       });
@@ -181,7 +182,6 @@
     }
 
     function highlightCurrentTime(sortedSchedule) {
-      // Remove previous highlight
       const oldLine = document.querySelector('.highlight-line');
       if (oldLine) oldLine.remove();
 
@@ -201,7 +201,7 @@
         }
       }
 
-      if (targetRow === null) return; // all activities passed
+      if (targetRow === null) return;
 
       const rowEl = timelineEl.children[targetRow];
       const line = document.createElement('div');
