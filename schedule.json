@@ -3,16 +3,85 @@
     {
       "Day": "Monday",
       "Schedule": [
-        { "Time": "", "Activity": "Lunch" },
-        { "Time": "20:00", "Activity": "Dinner" }
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Pancakes" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit Salad" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Biryani" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Cookies" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Curd Rice" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Painkiller" }
       ]
     },
     {
       "Day": "Tuesday",
       "Schedule": [
-        { "Time": "", "Activity": "Lunch" },
-        { "Time": "20:00", "Activity": "Dinner" },
-        { "Time": "22:00", "Activity": "Sleep" }
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Omelette" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin D" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Nuts Mix" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Sambar, Poriyal" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Mango Shake" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & Curry" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Multivitamin" }
+      ]
+    },
+    {
+      "Day": "Wednesday",
+      "Schedule": [
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Idli & Chutney" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Probiotic" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Granola Bar" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Rice & Dal" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Samosa" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Paneer Curry" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Vitamin B12" }
+      ]
+    },
+    {
+      "Day": "Thursday",
+      "Schedule": [
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Upma" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Banana" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken Curry & Rice" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Biscuits" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Vegetable Stew" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Calcium" }
+      ]
+    },
+    {
+      "Day": "Friday",
+      "Schedule": [
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Poha" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Omega 3" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit Yogurt" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Fried Rice" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Chocolate" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Dosa & Chutney" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Vitamin D" }
+      ]
+    },
+    {
+      "Day": "Saturday",
+      "Schedule": [
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "French Toast" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Antacid" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Muffin" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Pasta" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Chips" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Fish Curry" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Multivitamin" }
+      ]
+    },
+    {
+      "Day": "Sunday",
+      "Schedule": [
+        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Sandwich" },
+        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C" },
+        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit Salad" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Rajma & Rice" },
+        { "Time": "16:00", "Activity": "Snacks", "Comment": "Cookies" },
+        { "Time": "19:30", "Activity": "Dinner", "Comment": "Vegetable Curry" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Painkiller" }
       ]
     }
   ]
