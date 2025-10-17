@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Schedule 1</title>
+  <title>Daily Schedule</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,6 +11,9 @@
       padding: 0;
       background: #f5f5f5;
       color: #333;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -18,19 +21,24 @@
       color: white;
       text-align: center;
       padding: 1rem;
+      flex-shrink: 0;
     }
 
-    .nav-buttons {
+    .day-container {
+      background-color: #e0e0e0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 0.5rem 1rem;
-      background-color: #e0e0e0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      flex-shrink: 0;
     }
 
-    button {
+    .day-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .day-container button {
       padding: 0.5rem 1rem;
       font-size: 1rem;
       background-color: #4CAF50;
@@ -40,14 +48,14 @@
       cursor: pointer;
     }
 
-    button:hover {
+    .day-container button:hover {
       background-color: #45a049;
     }
 
     .timeline {
       padding: 1rem;
       overflow-y: auto;
-      height: calc(100vh - 140px);
+      flex-grow: 1;
     }
 
     .row {
@@ -65,31 +73,43 @@
       background-color: #ffffff;
     }
 
+    .time, .activity, .comment {
+      padding: 0 0.5rem;
+    }
+
     .time {
-      width: 30%;
+      width: 20%;
       text-align: left;
       font-weight: bold;
     }
 
     .activity {
-      width: 70%;
-      text-align: right;
+      width: 40%;
+      text-align: left;
+    }
+
+    .comment {
+      width: 40%;
+      text-align: left;
+      font-style: italic;
+      color: #555;
     }
 
     @media (max-width: 600px) {
-      .time, .activity {
-        font-size: 1rem;
+      .time, .activity, .comment {
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="dayTitle">Loading...</h1>
+    <h1>Daily Schedule</h1>
   </header>
 
-  <div class="nav-buttons">
+  <div class="day-container">
     <button id="prevBtn">⟵ Previous</button>
+    <div class="day-title" id="dayTitle">Loading...</div>
     <button id="nextBtn">Next ⟶</button>
   </div>
 
@@ -140,7 +160,7 @@
 
       dayTitleEl.textContent = dayData.Day;
 
-      // Sort by time (empty times at the bottom)
+      // Sort by time (empty times at bottom)
       const sorted = [...dayData.Schedule].sort((a, b) => {
         if (!a.Time) return 1;
         if (!b.Time) return -1;
@@ -156,6 +176,7 @@
         row.innerHTML = `
           <div class="time">${item.Time || ''}</div>
           <div class="activity">${item.Activity || ''}</div>
+          <div class="comment">${item.Comment || ''}</div>
         `;
         timelineEl.appendChild(row);
       });
