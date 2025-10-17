@@ -22,6 +22,7 @@
       text-align: center;
       padding: 1rem;
       flex-shrink: 0;
+      font-size: 1.5rem;
     }
 
     .day-container {
@@ -36,20 +37,21 @@
     .day-title {
       font-weight: bold;
       font-size: 1.2rem;
+      text-align: center;
+      flex-grow: 1;
     }
 
     .day-container button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
+      font-size: 2rem;
+      background: none;
       border: none;
-      border-radius: 5px;
+      color: #4CAF50;
+      font-weight: bold;
       cursor: pointer;
     }
 
     .day-container button:hover {
-      background-color: #45a049;
+      color: #388E3C;
     }
 
     .timeline {
@@ -99,18 +101,21 @@
       .time, .activity, .comment {
         font-size: 0.95rem;
       }
+      .day-container button {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Daily Schedule</h1>
+    Daily Schedule
   </header>
 
   <div class="day-container">
-    <button id="prevBtn">⟵ Previous</button>
+    <button id="prevBtn">&lt;</button>
     <div class="day-title" id="dayTitle">Loading...</div>
-    <button id="nextBtn">Next ⟶</button>
+    <button id="nextBtn">&gt;</button>
   </div>
 
   <div class="timeline" id="timeline"></div>
@@ -122,55 +127,29 @@
     const dayTitleEl = document.getElementById('dayTitle');
 
     async function loadSchedule() {
-      console.log("Starting schedule load...");
+      const res = await fetch('schedule.json');
+      const data = await res.json();
+      scheduleData = data.TimeChart;
 
-      try {
-        const res = await fetch('schedule.json');
-        const data = await res.json();
-        scheduleData = data.TimeChart;
+      const todayName = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+      currentDayIndex = scheduleData.findIndex(d => d.Day.toLowerCase() === todayName.toLowerCase());
+      if (currentDayIndex === -1) currentDayIndex = 0;
 
-        console.log("JSON loaded successfully:");
-        console.log(scheduleData);
-
-        // Detect current day
-        const todayName = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-        console.log("Detected today:", todayName);
-
-        // Find day index in JSON
-        currentDayIndex = scheduleData.findIndex(
-          d => d.Day.toLowerCase() === todayName.toLowerCase()
-        );
-        console.log("Found currentDayIndex:", currentDayIndex);
-
-        if (currentDayIndex === -1) {
-          console.warn("Today's day not found in JSON, defaulting to index 0");
-          currentDayIndex = 0;
-        }
-
-        displayDay(currentDayIndex);
-
-      } catch (err) {
-        console.error('Error loading JSON:', err);
-      }
+      displayDay(currentDayIndex);
     }
 
     function displayDay(index) {
       const dayData = scheduleData[index];
-      console.log("Displaying day:", dayData.Day, dayData.Schedule);
-
       dayTitleEl.textContent = dayData.Day;
 
-      // Sort by time (empty times at bottom)
       const sorted = [...dayData.Schedule].sort((a, b) => {
         if (!a.Time) return 1;
         if (!b.Time) return -1;
         return a.Time.localeCompare(b.Time);
       });
 
-      console.log("Sorted schedule:", sorted);
-
       timelineEl.innerHTML = '';
-      sorted.forEach((item, i) => {
+      sorted.forEach(item => {
         const row = document.createElement('div');
         row.className = 'row';
         row.innerHTML = `
@@ -180,19 +159,15 @@
         `;
         timelineEl.appendChild(row);
       });
-
-      console.log("Timeline updated on page");
     }
 
     document.getElementById('prevBtn').addEventListener('click', () => {
       currentDayIndex = (currentDayIndex - 1 + scheduleData.length) % scheduleData.length;
-      console.log("Navigated to previous day:", scheduleData[currentDayIndex].Day);
       displayDay(currentDayIndex);
     });
 
     document.getElementById('nextBtn').addEventListener('click', () => {
       currentDayIndex = (currentDayIndex + 1) % scheduleData.length;
-      console.log("Navigated to next day:", scheduleData[currentDayIndex].Day);
       displayDay(currentDayIndex);
     });
 
