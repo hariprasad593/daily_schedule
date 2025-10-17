@@ -96,69 +96,86 @@
   <div class="timeline" id="timeline"></div>
 
   <script>
-  let scheduleData = [];
-  let currentDayIndex = 0;
-  const timelineEl = document.getElementById('timeline');
-  const dayTitleEl = document.getElementById('dayTitle');
+    let scheduleData = [];
+    let currentDayIndex = 0;
+    const timelineEl = document.getElementById('timeline');
+    const dayTitleEl = document.getElementById('dayTitle');
 
-  async function loadSchedule() {
-    try {
-      const res = await fetch('schedule.json');
-      const data = await res.json();
-      scheduleData = data.TimeChart;
+    async function loadSchedule() {
+      console.log("Starting schedule load...");
 
-      // 🕒 Get current weekday (e.g., "Monday", "Tuesday", etc.)
-      const todayName = new Date().toLocaleString('en-US', { weekday: 'long' });
+      try {
+        const res = await fetch('schedule.json');
+        const data = await res.json();
+        scheduleData = data.TimeChart;
 
-      // 🔍 Find that day in the JSON (case-insensitive match)
-      currentDayIndex = scheduleData.findIndex(
-        d => d.Day.toLowerCase() === todayName.toLowerCase()
-      );
+        console.log("JSON loaded successfully:");
+        console.log(scheduleData);
 
-      // If not found, default to 0 (first day)
-      if (currentDayIndex === -1) currentDayIndex = 0;
+        // Detect current day
+        const todayName = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+        console.log("Detected today:", todayName);
 
-      displayDay(currentDayIndex);
-    } catch (err) {
-      console.error('Error loading JSON:', err);
+        // Find day index in JSON
+        currentDayIndex = scheduleData.findIndex(
+          d => d.Day.toLowerCase() === todayName.toLowerCase()
+        );
+        console.log("Found currentDayIndex:", currentDayIndex);
+
+        if (currentDayIndex === -1) {
+          console.warn("Today's day not found in JSON, defaulting to index 0");
+          currentDayIndex = 0;
+        }
+
+        displayDay(currentDayIndex);
+
+      } catch (err) {
+        console.error('Error loading JSON:', err);
+      }
     }
-  }
 
-  function displayDay(index) {
-    const dayData = scheduleData[index];
-    dayTitleEl.textContent = dayData.Day;
+    function displayDay(index) {
+      const dayData = scheduleData[index];
+      console.log("Displaying day:", dayData.Day, dayData.Schedule);
 
-    // Sort by time (empty times appear at bottom)
-    const sorted = [...dayData.Schedule].sort((a, b) => {
-      if (!a.Time) return 1;
-      if (!b.Time) return -1;
-      return a.Time.localeCompare(b.Time);
+      dayTitleEl.textContent = dayData.Day;
+
+      // Sort by time (empty times at the bottom)
+      const sorted = [...dayData.Schedule].sort((a, b) => {
+        if (!a.Time) return 1;
+        if (!b.Time) return -1;
+        return a.Time.localeCompare(b.Time);
+      });
+
+      console.log("Sorted schedule:", sorted);
+
+      timelineEl.innerHTML = '';
+      sorted.forEach((item, i) => {
+        const row = document.createElement('div');
+        row.className = 'row';
+        row.innerHTML = `
+          <div class="time">${item.Time || ''}</div>
+          <div class="activity">${item.Activity || ''}</div>
+        `;
+        timelineEl.appendChild(row);
+      });
+
+      console.log("Timeline updated on page");
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentDayIndex = (currentDayIndex - 1 + scheduleData.length) % scheduleData.length;
+      console.log("Navigated to previous day:", scheduleData[currentDayIndex].Day);
+      displayDay(currentDayIndex);
     });
 
-    timelineEl.innerHTML = '';
-    sorted.forEach(item => {
-      const row = document.createElement('div');
-      row.className = 'row';
-      row.innerHTML = `
-        <div class="time">${item.Time || ''}</div>
-        <div class="activity">${item.Activity || ''}</div>
-      `;
-      timelineEl.appendChild(row);
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentDayIndex = (currentDayIndex + 1) % scheduleData.length;
+      console.log("Navigated to next day:", scheduleData[currentDayIndex].Day);
+      displayDay(currentDayIndex);
     });
-  }
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    currentDayIndex = (currentDayIndex - 1 + scheduleData.length) % scheduleData.length;
-    displayDay(currentDayIndex);
-  });
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    currentDayIndex = (currentDayIndex + 1) % scheduleData.length;
-    displayDay(currentDayIndex);
-  });
-
-  // ✅ Load and display the correct day on startup
-  loadSchedule();
-</script>
+    loadSchedule();
+  </script>
 </body>
 </html>
