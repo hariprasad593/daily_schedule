@@ -67,19 +67,17 @@
 
     .row {
       display: flex;
-      justify-content: flex-start;
       align-items: center;
       padding: 0 0.5rem;
       border-bottom: 1px solid #ddd;
       position: relative;
-      height: 50px; /* fixed height for all rows */
+      height: 50px;
       line-height: 50px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    /* Alternate row colors */
     .row:nth-child(odd) { background-color: #ffffff; }
     .row:nth-child(even) { background-color: #f0f0f0; }
 
@@ -107,8 +105,9 @@
       color: #555;
     }
 
+    /* remove underline on hover */
     .comment:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .highlight-line {
@@ -170,13 +169,14 @@
       timelineEl.innerHTML = '';
 
       sorted.forEach(item => {
+        const shortComment = item.Comment ? item.Comment.split(' ').slice(0, 2).join(' ') + (item.Comment.split(' ').length > 2 ? '...' : '') : '';
         const row = document.createElement('div');
         row.className = 'row';
         row.dataset.time = item.Time || '';
         row.innerHTML = `
           <div class="time">${item.Time || ''}</div>
           <div class="activity">${item.Activity || ''}</div>
-          <div class="comment" title="Click to see full comment">${item.Comment || ''}</div>
+          <div class="comment" title="Click to see full comment">${shortComment}</div>
         `;
         timelineEl.appendChild(row);
       });
