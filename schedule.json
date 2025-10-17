@@ -1,0 +1,19 @@
+{
+  "TimeChart": [
+    {
+      "Day": "Monday",
+      "Schedule": [
+        { "Time": "", "Activity": "Lunch" },
+        { "Time": "20:00", "Activity": "Dinner" }
+      ]
+    },
+    {
+      "Day": "Tuesday",
+      "Schedule": [
+        { "Time": "", "Activity": "Lunch" },
+        { "Time": "20:00", "Activity": "Dinner" },
+        { "Time": "22:00", "Activity": "Sleep" }
+      ]
+    }
+  ]
+}
