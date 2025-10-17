@@ -69,24 +69,19 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0.8rem;
+      padding: 0 0.5rem;
       border-bottom: 1px solid #ddd;
       position: relative;
+      height: 50px; /* fixed height for all rows */
+      line-height: 50px;
       white-space: nowrap;
-      overflow-x: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Colorful alternate row colors */
-    .row:nth-child(1) { background-color: #FFCDD2; }
-    .row:nth-child(2) { background-color: #C8E6C9; }
-    .row:nth-child(3) { background-color: #BBDEFB; }
-    .row:nth-child(4) { background-color: #FFF9C4; }
-    .row:nth-child(5) { background-color: #D1C4E9; }
-    .row:nth-child(6) { background-color: #FFECB3; }
-    .row:nth-child(7) { background-color: #B2DFDB; }
-    .row:nth-child(8) { background-color: #F0F4C3; }
-    .row:nth-child(9) { background-color: #FFE0B2; }
-    .row:nth-child(10) { background-color: #CFD8DC; }
+    /* Alternate row colors */
+    .row:nth-child(odd) { background-color: #ffffff; }
+    .row:nth-child(even) { background-color: #f0f0f0; }
 
     .time {
       width: 80px;
@@ -96,15 +91,24 @@
       padding-right: 1rem;
     }
 
-    .activity-comment {
-      display: flex;
+    .activity {
+      width: 40%;
       flex-shrink: 0;
-      min-width: 500px; /* allow horizontal scroll */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .activity, .comment {
-      padding: 0 0.5rem;
+    .comment {
+      width: 50%;
       flex-shrink: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .comment:hover {
+      text-decoration: underline;
     }
 
     .highlight-line {
@@ -118,7 +122,8 @@
 
     @media (max-width: 600px) {
       .time { width: 60px; }
-      .activity-comment { min-width: 300px; }
+      .activity { width: 45%; }
+      .comment { width: 45%; }
       .day-container button { font-size: 1.8rem; padding: 0.3rem 0.6rem; }
     }
   </style>
@@ -170,12 +175,18 @@
         row.dataset.time = item.Time || '';
         row.innerHTML = `
           <div class="time">${item.Time || ''}</div>
-          <div class="activity-comment">
-            <div class="activity">${item.Activity || ''}</div>
-            <div class="comment">${item.Comment || ''}</div>
-          </div>
+          <div class="activity">${item.Activity || ''}</div>
+          <div class="comment" title="Click to see full comment">${item.Comment || ''}</div>
         `;
         timelineEl.appendChild(row);
+      });
+
+      // Add click event for showing full comment
+      document.querySelectorAll('.comment').forEach((el, idx) => {
+        el.addEventListener('click', () => {
+          const comment = sorted[idx].Comment || 'No comment';
+          alert(comment);
+        });
       });
 
       highlightCurrentTime(sorted);
