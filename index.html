@@ -96,59 +96,69 @@
   <div class="timeline" id="timeline"></div>
 
   <script>
-    let scheduleData = [];
-    let currentDayIndex = 0;
-    const timelineEl = document.getElementById('timeline');
-    const dayTitleEl = document.getElementById('dayTitle');
+  let scheduleData = [];
+  let currentDayIndex = 0;
+  const timelineEl = document.getElementById('timeline');
+  const dayTitleEl = document.getElementById('dayTitle');
 
-    async function loadSchedule() {
-      try {
-        const res = await fetch('schedule.json');
-        const data = await res.json();
-        scheduleData = data.TimeChart;
-        const today = new Date().toLocaleString('en-US', { weekday: 'long' });
-        currentDayIndex = scheduleData.findIndex(d => d.Day.toLowerCase() === today.toLowerCase());
-        if (currentDayIndex === -1) currentDayIndex = 0;
-        displayDay(currentDayIndex);
-      } catch (err) {
-        console.error('Error loading JSON:', err);
-      }
-    }
+  async function loadSchedule() {
+    try {
+      const res = await fetch('schedule.json');
+      const data = await res.json();
+      scheduleData = data.TimeChart;
 
-    function displayDay(index) {
-      const dayData = scheduleData[index];
-      dayTitleEl.textContent = dayData.Day;
+      // 🕒 Get current weekday (e.g., "Monday", "Tuesday", etc.)
+      const todayName = new Date().toLocaleString('en-US', { weekday: 'long' });
 
-      // Sort by time (empty time goes last)
-      const sorted = [...dayData.Schedule].sort((a, b) => {
-        if (!a.Time) return 1;
-        if (!b.Time) return -1;
-        return a.Time.localeCompare(b.Time);
-      });
+      // 🔍 Find that day in the JSON (case-insensitive match)
+      currentDayIndex = scheduleData.findIndex(
+        d => d.Day.toLowerCase() === todayName.toLowerCase()
+      );
 
-      timelineEl.innerHTML = '';
-      sorted.forEach(item => {
-        const row = document.createElement('div');
-        row.className = 'row';
-        row.innerHTML = `
-          <div class="time">${item.Time || ''}</div>
-          <div class="activity">${item.Activity || ''}</div>
-        `;
-        timelineEl.appendChild(row);
-      });
-    }
+      // If not found, default to 0 (first day)
+      if (currentDayIndex === -1) currentDayIndex = 0;
 
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      currentDayIndex = (currentDayIndex - 1 + scheduleData.length) % scheduleData.length;
       displayDay(currentDayIndex);
+    } catch (err) {
+      console.error('Error loading JSON:', err);
+    }
+  }
+
+  function displayDay(index) {
+    const dayData = scheduleData[index];
+    dayTitleEl.textContent = dayData.Day;
+
+    // Sort by time (empty times appear at bottom)
+    const sorted = [...dayData.Schedule].sort((a, b) => {
+      if (!a.Time) return 1;
+      if (!b.Time) return -1;
+      return a.Time.localeCompare(b.Time);
     });
 
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      currentDayIndex = (currentDayIndex + 1) % scheduleData.length;
-      displayDay(currentDayIndex);
+    timelineEl.innerHTML = '';
+    sorted.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'row';
+      row.innerHTML = `
+        <div class="time">${item.Time || ''}</div>
+        <div class="activity">${item.Activity || ''}</div>
+      `;
+      timelineEl.appendChild(row);
     });
+  }
 
-    loadSchedule();
-  </script>
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentDayIndex = (currentDayIndex - 1 + scheduleData.length) % scheduleData.length;
+    displayDay(currentDayIndex);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentDayIndex = (currentDayIndex + 1) % scheduleData.length;
+    displayDay(currentDayIndex);
+  });
+
+  // ✅ Load and display the correct day on startup
+  loadSchedule();
+</script>
 </body>
 </html>
