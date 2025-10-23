@@ -111,7 +111,10 @@
       max-height: 0;
       overflow: hidden;
       opacity: 0;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #c8e6c9;
     }
 
     .card:hover .comment {
@@ -139,7 +142,7 @@
   </style>
 </head>
 <body>
-  <header>🗓️ Daily Schedule</header>
+  <header>Daily Schedule</header>
 
   <div class="day-container">
     <button id="prevBtn">◀</button>
