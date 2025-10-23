@@ -16,7 +16,6 @@
       height: 100vh;
     }
 
-    /* Header: dark edges, light center */
     header {
       background: linear-gradient(90deg, #2e7d32 0%, #66bb6a 50%, #2e7d32 100%);
       color: white;
@@ -24,21 +23,11 @@
       padding: 1rem 0;
       font-size: 1.8rem;
       font-weight: bold;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
       letter-spacing: 1px;
       flex-shrink: 0;
     }
-
-    .day-container {
-      background-color: #c8e6c9;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      flex-shrink: 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
+    
     .day-title {
       font-weight: bold;
       font-size: 1.3rem;
@@ -46,23 +35,38 @@
       flex-grow: 1;
       color: #1b5e20;
     }
+    
+    .day-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: #c8e6c9;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
     .day-container button {
       font-size: 1.5rem;
       background: linear-gradient(90deg, #2e7d32, #4caf50);
       color: white;
       border: none;
-      border-radius: 10px;
-      width: 40px;           /* fixed width for perfect circle */
-      height: 40px;          /* fixed height for perfect circle */
+      border-radius: 20%;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
       font-weight: bold;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease;
-      display: flex;         /* flex container */
-      align-items: center;   /* center vertically */
-      justify-content: center; /* center horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 0;
+    }
+
+    .day-container button:hover {
+      background: linear-gradient(90deg, #1b5e20, #388e3c);
+      outline: none;
     }
 
     .timeline {
@@ -79,13 +83,11 @@
       padding: 1rem;
       margin-bottom: 1rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
       border-left: 5px solid #4caf50;
       position: relative;
-    }
-
-    .card:hover {
-      background-color: #c8e6c9;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .time-activity {
@@ -106,6 +108,15 @@
       margin-top: 0.5rem;
       color: #33691e;
       line-height: 1.4;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .card:hover .comment {
+      max-height: 2000px;
+      opacity: 1;
     }
 
     .highlight-line {
@@ -117,13 +128,13 @@
       border-radius: 2px;
       z-index: 10;
       box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-      transition: top 0.3s ease;
+      transition: top 0.2s ease;
     }
 
     @media (max-width: 600px) {
       header { font-size: 1.5rem; }
       .time-activity { flex-direction: column; align-items: flex-start; }
-      .day-container button { font-size: 1.4rem; }
+      .day-container button { width: 36px; height: 36px; font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -182,6 +193,10 @@
       });
 
       highlightCurrentTime(sorted);
+
+      // Use ResizeObserver to track card height changes
+      const observer = new ResizeObserver(() => highlightCurrentTime(sorted));
+      document.querySelectorAll('.card').forEach(card => observer.observe(card));
     }
 
     function highlightCurrentTime(sortedSchedule) {
@@ -207,19 +222,16 @@
       let lineY;
 
       if (beforeIndex === null && afterIndex !== null) {
-        // Before first activity → line above first card
         const firstCard = timelineEl.children[afterIndex];
         const firstRect = firstCard.getBoundingClientRect();
         const timelineRect = timelineEl.getBoundingClientRect();
         lineY = firstRect.top - timelineRect.top + timelineEl.scrollTop - 2;
       } else if (beforeIndex !== null && afterIndex === null) {
-        // After last activity → line below last card
         const lastCard = timelineEl.children[beforeIndex];
         const lastRect = lastCard.getBoundingClientRect();
         const timelineRect = timelineEl.getBoundingClientRect();
         lineY = lastRect.bottom - timelineRect.top + timelineEl.scrollTop + 2;
       } else if (beforeIndex !== null && afterIndex !== null) {
-        // Between cards → line at midpoint
         const beforeCard = timelineEl.children[beforeIndex];
         const afterCard = timelineEl.children[afterIndex];
         const beforeRect = beforeCard.getBoundingClientRect();
@@ -227,7 +239,6 @@
         const timelineRect = timelineEl.getBoundingClientRect();
         lineY = (beforeRect.bottom + afterRect.top) / 2 - timelineRect.top + timelineEl.scrollTop;
       } else {
-        // No cards → skip
         return;
       }
 
