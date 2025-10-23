@@ -101,7 +101,7 @@
         { "Time": "10:30", "Activity": "Work/Study", "Comment": "Morning tasks" },
         { "Time": "11:30", "Activity": "Snacks", "Comment": "Banana" },
         { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice" },
         { "Time": "14:00", "Activity": "Rest", "Comment": "Relax" },
         { "Time": "15:00", "Activity": "Reading", "Comment": "Read news / book" },
         { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
@@ -113,13 +113,14 @@
         { "Time": "20:00", "Activity": "Tablet", "Comment": "Calcium tablet" },
         { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
         { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "23:55", "Activity": "Sleep Tight", "Comment": "Good night" },
+        { "Time": "23:58", "Activity": "Sleep Tight", "Comment": "Good night" },
         { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
       ]
     },
     {
       "Day": "Friday",
       "Schedule": [
+        { "Time": "00:01", "Activity": "Wake Up", "Comment": "Start fresh" },
         { "Time": "06:30", "Activity": "Wake Up", "Comment": "Start fresh" },
         { "Time": "06:40", "Activity": "Drink Water", "Comment": "1 glass water" },
         { "Time": "06:50", "Activity": "Exercise", "Comment": "Stretch & yoga" },
@@ -131,7 +132,7 @@
         { "Time": "10:30", "Activity": "Work/Study", "Comment": "Important tasks" },
         { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit bowl" },
         { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydration" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Rice & chicken curry" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, \nChicken curry\n Chapati" },
         { "Time": "14:00", "Activity": "Rest", "Comment": "Short nap" },
         { "Time": "15:00", "Activity": "Reading", "Comment": "Book or news" },
         { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
@@ -140,7 +141,7 @@
         { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
         { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate" },
         { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & vegetables" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Vitamin tablet" },
+        { "Time": "20:00", "Activity": "Tablet", "Comment": "Krithiga:\nVitamin D tablet\nEndofert\nFolisurge\nDuphaston\nEnrifol\n\nHari:\nPaterniaXT" },
         { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
         { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
         { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
