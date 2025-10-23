@@ -53,6 +53,24 @@
       color: white;
       border: none;
       border-radius: 50%;
+      width: 40px;           /* fixed width for perfect circle */
+      height: 40px;          /* fixed height for perfect circle */
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+      display: flex;         /* flex container */
+      align-items: center;   /* center vertically */
+      justify-content: center; /* center horizontally */
+      padding: 0;
+    }
+
+    .day-container button {
+      font-size: 1.5rem;
+      background: linear-gradient(90deg, #2e7d32, #4caf50);
+      color: white;
+      border: none;
+      border-radius: 50%;
       padding: 0.4rem 0.7rem;
       cursor: pointer;
       font-weight: bold;
@@ -128,7 +146,7 @@
   </style>
 </head>
 <body>
-  <header>Daily Schedule</header>
+  <header>🗓️ Daily Schedule</header>
 
   <div class="day-container">
     <button id="prevBtn">◀</button>
@@ -201,22 +219,35 @@
         const activityMinutes = hh * 60 + mm;
 
         if (nowMinutes >= activityMinutes) beforeIndex = i;
-        if (nowMinutes < activityMinutes) {
-          afterIndex = i;
-          break;
-        }
+        if (nowMinutes < activityMinutes && afterIndex === null) afterIndex = i;
       }
 
-      if (beforeIndex === null || afterIndex === null) return;
+      let lineY;
 
-      const beforeCard = timelineEl.children[beforeIndex];
-      const afterCard = timelineEl.children[afterIndex];
-      if (!beforeCard || !afterCard) return;
-
-      const beforeBottom = beforeCard.offsetTop + beforeCard.offsetHeight;
-      const afterTop = afterCard.offsetTop;
-
-      const lineY = beforeBottom + (afterTop - beforeBottom) / 2; // midpoint between cards
+      if (beforeIndex === null && afterIndex !== null) {
+        // Before first activity → line above first card
+        const firstCard = timelineEl.children[afterIndex];
+        const firstRect = firstCard.getBoundingClientRect();
+        const timelineRect = timelineEl.getBoundingClientRect();
+        lineY = firstRect.top - timelineRect.top + timelineEl.scrollTop - 2;
+      } else if (beforeIndex !== null && afterIndex === null) {
+        // After last activity → line below last card
+        const lastCard = timelineEl.children[beforeIndex];
+        const lastRect = lastCard.getBoundingClientRect();
+        const timelineRect = timelineEl.getBoundingClientRect();
+        lineY = lastRect.bottom - timelineRect.top + timelineEl.scrollTop + 2;
+      } else if (beforeIndex !== null && afterIndex !== null) {
+        // Between cards → line at midpoint
+        const beforeCard = timelineEl.children[beforeIndex];
+        const afterCard = timelineEl.children[afterIndex];
+        const beforeRect = beforeCard.getBoundingClientRect();
+        const afterRect = afterCard.getBoundingClientRect();
+        const timelineRect = timelineEl.getBoundingClientRect();
+        lineY = (beforeRect.bottom + afterRect.top) / 2 - timelineRect.top + timelineEl.scrollTop;
+      } else {
+        // No cards → skip
+        return;
+      }
 
       const line = document.createElement('div');
       line.className = 'highlight-line';
