@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Schedule</title>
   <style>
+    * {
+      -webkit-tap-highlight-color: transparent; /* mobile tap highlight */
+    }
+
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
       margin: 0;
@@ -27,15 +31,7 @@
       letter-spacing: 1px;
       flex-shrink: 0;
     }
-    
-    .day-title {
-      font-weight: bold;
-      font-size: 1.3rem;
-      text-align: center;
-      flex-grow: 1;
-      color: #1b5e20;
-    }
-    
+
     .day-container {
       display: flex;
       justify-content: space-between;
@@ -46,12 +42,20 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
+    .day-title {
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-align: center;
+      flex-grow: 1;
+      color: #1b5e20;
+    }
+
     .day-container button {
       font-size: 1.5rem;
       background: linear-gradient(90deg, #2e7d32, #4caf50);
       color: white;
       border: none;
-      border-radius: 20%;
+      border-radius: 50%;
       width: 40px;
       height: 40px;
       cursor: pointer;
@@ -62,11 +66,12 @@
       justify-content: center;
       align-items: center;
       padding: 0;
+      outline: none;
     }
 
     .day-container button:hover {
       background: linear-gradient(90deg, #1b5e20, #388e3c);
-      outline: none;
+      transform: scale(1.05);
     }
 
     .timeline {
@@ -86,8 +91,8 @@
       border-left: 5px solid #4caf50;
       position: relative;
       overflow: hidden;
-      cursor: pointer;
       transition: all 0.3s ease;
+      outline: none;
     }
 
     .time-activity {
@@ -111,16 +116,16 @@
       max-height: 0;
       overflow: hidden;
       opacity: 0;
-      white-space: pre-line;
+      white-space: pre-line; /* preserve \n as line breaks */
     }
 
-    .card:hover {
-      background-color: #c8e6c9;
-    }
-
-    .card:hover .comment {
-      max-height: 2000px;
+    .card.expanded .comment {
+      max-height: 500px;
       opacity: 1;
+    }
+
+    .card.expanded {
+      background-color: #c8e6c9;
     }
 
     .highlight-line {
@@ -184,6 +189,7 @@
       timelineEl.innerHTML = '';
 
       sorted.forEach(item => {
+        const commentText = item.Comment ? item.Comment : '';
         const card = document.createElement('div');
         card.className = 'card';
         card.dataset.time = item.Time || '';
@@ -191,16 +197,27 @@
           <div class="time-activity">
             <div class="time">${item.Time || ''} | ${item.Activity || ''}</div>
           </div>
-          ${item.Comment ? `<div class="comment">${item.Comment}</div>` : ''}
+          ${commentText ? `<div class="comment">${commentText}</div>` : ''}
         `;
         timelineEl.appendChild(card);
+
+        // Click to expand/collapse
+        card.addEventListener('click', () => {
+          // Collapse all other cards
+          document.querySelectorAll('.card').forEach(c => {
+            if (c !== card) c.classList.remove('expanded');
+          });
+
+          // Toggle the clicked card
+          card.classList.toggle('expanded');
+        });
       });
 
-      highlightCurrentTime(sorted);
-
-      // Use ResizeObserver to track card height changes
+      // Observe card size changes to adjust highlight line
       const observer = new ResizeObserver(() => highlightCurrentTime(sorted));
       document.querySelectorAll('.card').forEach(card => observer.observe(card));
+
+      highlightCurrentTime(sorted);
     }
 
     function highlightCurrentTime(sortedSchedule) {
@@ -266,3 +283,4 @@
   </script>
 </body>
 </html>
+  
