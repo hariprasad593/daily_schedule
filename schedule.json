@@ -101,7 +101,7 @@
         { "Time": "10:30", "Activity": "Work/Study", "Comment": "Morning tasks" },
         { "Time": "11:30", "Activity": "Snacks", "Comment": "Banana" },
         { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice" },
+        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice" },
         { "Time": "14:00", "Activity": "Rest", "Comment": "Relax" },
         { "Time": "15:00", "Activity": "Reading", "Comment": "Read news / book" },
         { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
@@ -113,6 +113,7 @@
         { "Time": "20:00", "Activity": "Tablet", "Comment": "Calcium tablet" },
         { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
         { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
+        { "Time": "23:55", "Activity": "Sleep Tight", "Comment": "Good night" },
         { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
       ]
     },
