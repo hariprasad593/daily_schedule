@@ -1,208 +1,773 @@
 {
   "TimeChart": [
     {
-      "Day": "Monday",
-      "Schedule": [
-        { "Time": "06:30", "Activity": "Wake Up", "Comment": "Start the day fresh" },
-        { "Time": "06:45", "Activity": "Drink Water", "Comment": "1 glass of water" },
-        { "Time": "07:00", "Activity": "Exercise", "Comment": "Morning stretches" },
-        { "Time": "07:30", "Activity": "Walking", "Comment": "15 mins around neighborhood" },
-        { "Time": "08:00", "Activity": "Shower", "Comment": "Freshen up" },
-        { "Time": "08:30", "Activity": "Meditation", "Comment": "10 minutes breathing" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Pancakes with fruits" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C tablet" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Focus session" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit salad" },
-        { "Time": "12:00", "Activity": "Hydrate", "Comment": "Drink water" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Biryani" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Short nap or relax" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Read a book" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Cookies" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening walk 10 mins" },
-        { "Time": "17:00", "Activity": "Work/Study", "Comment": "Wrap up tasks" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate before dinner" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Curd Rice with vegetables" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Painkiller if needed" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "Listen to music or TV" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes and bag ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
-      ]
-    },
-    {
-      "Day": "Tuesday",
-      "Schedule": [
-        { "Time": "06:30", "Activity": "Wake Up", "Comment": "Fresh start" },
-        { "Time": "06:40", "Activity": "Drink Water", "Comment": "1 glass water" },
-        { "Time": "06:50", "Activity": "Exercise", "Comment": "Stretching & warm-up" },
-        { "Time": "07:20", "Activity": "Walking", "Comment": "Neighborhood walk" },
-        { "Time": "07:50", "Activity": "Shower", "Comment": "Refresh yourself" },
-        { "Time": "08:10", "Activity": "Meditation", "Comment": "Focus on breathing" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Omelette & toast" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin D" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Important tasks" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Nuts mix" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Sambar with rice" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Relax or nap" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Book time" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Mango shake" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening walk" },
-        { "Time": "17:00", "Activity": "Work/Study", "Comment": "Finish tasks" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light cardio" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate before dinner" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & curry" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Multivitamin" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
-      ]
-    },
-    {
-      "Day": "Wednesday",
-      "Schedule": [
-        { "Time": "06:30", "Activity": "Wake Up", "Comment": "Morning stretch" },
-        { "Time": "06:40", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "06:50", "Activity": "Exercise", "Comment": "Yoga" },
-        { "Time": "07:20", "Activity": "Walking", "Comment": "Neighborhood walk" },
-        { "Time": "07:50", "Activity": "Shower", "Comment": "Refresh" },
-        { "Time": "08:10", "Activity": "Meditation", "Comment": "Focus session" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Idli & chutney" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Probiotic" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Priority tasks" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Granola bar" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydration" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Rice & dal" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Quick nap" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Book" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Samosa" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening walk" },
-        { "Time": "17:00", "Activity": "Work/Study", "Comment": "Complete tasks" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Paneer curry" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Vitamin B12" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
-      ]
-    },
-    {
-      "Day": "Thursday",
-      "Schedule": [
-        { "Time": "06:30", "Activity": "Wake Up", "Comment": "Morning refresh" },
-        { "Time": "06:40", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "06:50", "Activity": "Exercise", "Comment": "Morning jog" },
-        { "Time": "07:20", "Activity": "Walking", "Comment": "Neighborhood walk" },
-        { "Time": "07:50", "Activity": "Shower", "Comment": "Refresh" },
-        { "Time": "08:10", "Activity": "Meditation", "Comment": "Calm mind" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Upma" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Morning tasks" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Banana" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice,Chicken curry & rice, \nChicken curry & rice,\n<br> Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice, Chicken curry & rice" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Relax" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Read news / book" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening walk" },
-        { "Time": "17:00", "Activity": "Work/Study", "Comment": "Finish tasks" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate before dinner" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Veg pulao" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Calcium tablet" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "23:58", "Activity": "Sleep Tight", "Comment": "Good night" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
-      ]
-    },
-    {
       "Day": "Friday",
       "Schedule": [
-        { "Time": "00:01", "Activity": "Wake Up", "Comment": "Start fresh" },
-        { "Time": "06:30", "Activity": "Wake Up", "Comment": "Start fresh" },
-        { "Time": "06:40", "Activity": "Drink Water", "Comment": "1 glass water" },
-        { "Time": "06:50", "Activity": "Exercise", "Comment": "Stretch & yoga" },
-        { "Time": "07:20", "Activity": "Walking", "Comment": "Neighborhood walk" },
-        { "Time": "07:50", "Activity": "Shower", "Comment": "Refresh" },
-        { "Time": "08:10", "Activity": "Meditation", "Comment": "Mind calm" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Dosa with chutney" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin B" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Important tasks" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit bowl" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydration" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Chicken curry & rice, \nChicken curry\n Chapati" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Short nap" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Book or news" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening stroll" },
-        { "Time": "17:00", "Activity": "Work/Study", "Comment": "Finish pending tasks" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & vegetables" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Krithiga:\nVitamin D tablet\nEndofert\nFolisurge\nDuphaston\nEnrifol\n\nHari:\nPaterniaXT" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nSmall Bitter gourd - 1"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\n\nCommon\n------\nVegetable salad\nEgg"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nKeerai (manathakali)"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nInclude Raw Guava / Athikkai"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
+      ]
+    },
+    {
+      "Day": "Monday",
+      "Schedule": [
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nSmall Bitter gourd - 1"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nVazhapoo poriyal\nDrumstick"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nInclude Raw Guava / Athikkai"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
       ]
     },
     {
       "Day": "Saturday",
       "Schedule": [
-        { "Time": "07:00", "Activity": "Wake Up", "Comment": "Sleep in a bit" },
-        { "Time": "07:10", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "07:20", "Activity": "Exercise", "Comment": "Light stretches" },
-        { "Time": "07:50", "Activity": "Walking", "Comment": "Morning walk" },
-        { "Time": "08:20", "Activity": "Shower", "Comment": "Refresh" },
-        { "Time": "08:40", "Activity": "Meditation", "Comment": "Calm mind" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Poha with tea" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin C" },
-        { "Time": "10:30", "Activity": "Work/Study", "Comment": "Tasks if needed" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruits" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydration" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Veg pulao" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Relax or nap" },
-        { "Time": "15:00", "Activity": "Hobby Time", "Comment": "Music / painting" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Cookies" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening walk" },
-        { "Time": "17:00", "Activity": "Leisure Reading", "Comment": "Book" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & curry" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Multivitamin" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nAvarakkai - 8"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nKeerai (manathakali)"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nAny fruits"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
       ]
     },
     {
       "Day": "Sunday",
       "Schedule": [
-        { "Time": "07:00", "Activity": "Wake Up", "Comment": "Relaxed morning" },
-        { "Time": "07:10", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "07:20", "Activity": "Exercise", "Comment": "Stretch & yoga" },
-        { "Time": "07:50", "Activity": "Walking", "Comment": "Leisure walk" },
-        { "Time": "08:20", "Activity": "Shower", "Comment": "Refresh" },
-        { "Time": "08:40", "Activity": "Meditation", "Comment": "Mindfulness" },
-        { "Time": "09:00", "Activity": "Breakfast", "Comment": "Eggs & toast" },
-        { "Time": "09:30", "Activity": "Medicine", "Comment": "Vitamin D" },
-        { "Time": "10:30", "Activity": "Leisure", "Comment": "Hobby or music" },
-        { "Time": "11:30", "Activity": "Snacks", "Comment": "Fruit bowl" },
-        { "Time": "12:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "13:00", "Activity": "Lunch", "Comment": "Rice & dal" },
-        { "Time": "14:00", "Activity": "Rest", "Comment": "Short nap" },
-        { "Time": "15:00", "Activity": "Reading", "Comment": "Book or news" },
-        { "Time": "16:00", "Activity": "Snacks", "Comment": "Tea & biscuits" },
-        { "Time": "16:30", "Activity": "Walking", "Comment": "Evening stroll" },
-        { "Time": "17:00", "Activity": "Leisure", "Comment": "Relax" },
-        { "Time": "18:30", "Activity": "Exercise", "Comment": "Light workout" },
-        { "Time": "19:00", "Activity": "Drink Water", "Comment": "Hydrate" },
-        { "Time": "19:30", "Activity": "Dinner", "Comment": "Chapati & curry" },
-        { "Time": "20:00", "Activity": "Tablet", "Comment": "Multivitamin" },
-        { "Time": "20:30", "Activity": "Relax", "Comment": "TV / music" },
-        { "Time": "21:30", "Activity": "Prepare for next day", "Comment": "Clothes ready" },
-        { "Time": "22:00", "Activity": "Sleep", "Comment": "Good night" }
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nAvarakkai - 8"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nKeerai (manathakali)"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nAny fruits"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
+      ]
+    },
+    {
+      "Day": "Thursday",
+      "Schedule": [
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nBeans - 8"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\n\nCommon\n------\nPuttu with kadala kari"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nVazhapoo poriyal\nDrumstick"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nAny fruits"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
+      ]
+    },
+    {
+      "Day": "Tuesday",
+      "Schedule": [
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nBeans - 8"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\n\nCommon\n------\nVegetable salad\nEgg"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nVazhapoo poriyal\nDrumstick"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nAny fruits"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
+      ]
+    },
+    {
+      "Day": "Wednesday",
+      "Schedule": [
+        {
+          "Time": "06:00",
+          "Activity": "Drink Oil",
+          "Comment": "Krithiga\n--------\nGingily oil 1 small tsp"
+        },
+        {
+          "Time": "06:05",
+          "Activity": "Yoga",
+          "Comment": ""
+        },
+        {
+          "Time": "07:00",
+          "Activity": "Day starter vegetable",
+          "Comment": "Hariprasad\n----------\nSmall Bitter gourd - 1"
+        },
+        {
+          "Time": "08:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nHalf pomegranate each"
+        },
+        {
+          "Time": "08:50",
+          "Activity": "Drink Ghee",
+          "Comment": "Krithiga\n--------\nCow ghee 1 tsp"
+        },
+        {
+          "Time": "09:00",
+          "Activity": "Breakfast",
+          "Comment": "Krithiga\n--------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp\nsunflower seed - 1 tsp\n\nHariprasad\n----------\nSoaked sprouts\nBadam - 10\nWalnut - 3\nPista - 4\nGround nut - 2 tsp\nPumpkin seeds - 1 tsp"
+        },
+        {
+          "Time": "10:00",
+          "Activity": "Vegetable Juice",
+          "Comment": "Common\n------\nKothavarai juice with 40 pieces\n1 glass each."
+        },
+        {
+          "Time": "10:30",
+          "Activity": "Medicinal Drink",
+          "Comment": "Krithiga\n--------\nAvarampoo decoction - 1tsp in 1 glass\n\nHariprasad\n----------\nManjal karisalankanni decoction - 1tsp in 1 glass"
+        },
+        {
+          "Time": "11:00",
+          "Activity": "Detox Drink",
+          "Comment": "Common\n------\nAmla and curry leaves juice with butter milk"
+        },
+        {
+          "Time": "12:00",
+          "Activity": "Lemon",
+          "Comment": "Common\n------\nSmall lemon 1 each"
+        },
+        {
+          "Time": "13:30",
+          "Activity": "Lunch",
+          "Comment": "Common\n------\nKeerai (manathakali)"
+        },
+        {
+          "Time": "13:45",
+          "Activity": "Vegetable Raita",
+          "Comment": "Common\n------\nRidge gourd\nAsh gourd\nBottle gourd\nSnake Gourd\nKovakkai\nChow-Chow"
+        },
+        {
+          "Time": "15:30",
+          "Activity": "Energy Drink",
+          "Comment": "Krithiga\n--------\nHalf glass coconut milk"
+        },
+        {
+          "Time": "17:00",
+          "Activity": "Fruits",
+          "Comment": "Common\n------\nInclude Raw Guava / Athikkai"
+        },
+        {
+          "Time": "19:30",
+          "Activity": "Tub bath",
+          "Comment": "Krithiga\n--------\nTub bath with cold water"
+        },
+        {
+          "Time": "19:45",
+          "Activity": "Tub bath",
+          "Comment": "Hariprasad\n----------\nTub bath with cold water"
+        },
+        {
+          "Time": "20:00",
+          "Activity": "Dinner",
+          "Comment": "Common\n------\nTiffen"
+        },
+        {
+          "Time": "20:45",
+          "Activity": "Walking",
+          "Comment": ""
+        },
+        {
+          "Time": "20:55",
+          "Activity": "Finisher Drink",
+          "Comment": "Krithiga\n--------\nBadam pisin"
+        },
+        {
+          "Time": "21:00",
+          "Activity": "Prepare for next day",
+          "Comment": "Common\n------\nSoak nuts\nOrder essentials\nSoak badam pisin"
+        },
+        {
+          "Time": "21:15",
+          "Activity": "Medicine",
+          "Comment": "Hariprasad\n----------\nAshwaganda chooranam\nPaternia XT"
+        }
       ]
     }
   ]
